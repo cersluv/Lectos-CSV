@@ -1,13 +1,18 @@
 package Main;
 
 import java.util.Objects;
+import java.io.File;
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class Receiver {
+public abstract class Receiver {
     /* Clase Padre y receptora de información
-    * Recibe los datos de los estudiantes
-    * Les hace cambios y también los dá
-    *
-    */
+     * Recibe los datos de los estudiantes
+     * Les hace cambios y también los dá
+     *
+     */
     private String carne;
     private String NombreCompleto;
     private String Correo;
@@ -69,49 +74,6 @@ public class Receiver {
         return Nota_Proyecto_3;
     }
 
-    public void setCarne(String carne) {
-        this.carne = carne;
-    }
-
-    public void setNombreCompleto(String nombreCompleto) {
-        NombreCompleto = nombreCompleto;
-    }
-
-    public void setCorreo(String correo) {
-        Correo = correo;
-    }
-
-    public void setNickname(String nickname) {
-        Nickname = nickname;
-    }
-
-    public void setTipoEstudiante(String tipoEstudiante) {
-        TipoEstudiante = tipoEstudiante;
-    }
-
-    public void setNotaPromedio_Examenes(Integer notaPromedio_Examenes) {
-        NotaPromedio_Examenes = notaPromedio_Examenes;
-    }
-
-    public void setNotaPromedio_Quices(Integer notaPromedio_Quices) {
-        NotaPromedio_Quices = notaPromedio_Quices;
-    }
-
-    public void setNotaPormedio_Tareas(Integer notaPormedio_Tareas) {
-        NotaPormedio_Tareas = notaPormedio_Tareas;
-    }
-
-    public void setNota_Proyecto_1(Integer nota_Proyecto_1) {
-        Nota_Proyecto_1 = nota_Proyecto_1;
-    }
-
-    public void setNota_Poryecto_2(Integer nota_Poryecto_2) {
-        Nota_Poryecto_2 = nota_Poryecto_2;
-    }
-
-    public void setNota_Proyecto_3(Integer nota_Proyecto_3) {
-        Nota_Proyecto_3 = nota_Proyecto_3;
-    }
 
     public Receiver(String carne, String nombreCompleto, String correo, String Telefono, String nickname, String tipoEstudiante, Integer notaPromedio_Examenes, Integer notaPromedio_Quices, Integer notaPormedio_Tareas, Integer nota_Proyecto_1, Integer nota_Poryecto_2, Integer nota_Proyecto_3) {
         this.carne = carne;
@@ -128,11 +90,65 @@ public class Receiver {
         this.Nota_Proyecto_3 = nota_Proyecto_3;
     }
 
+    public abstract double notaPromedio();
+
     public double PromedioFinal(){
         double prom_final = 0.0;
         if (Objects.equals("Pepe", "Pepe")){
             prom_final = getNotaPromedio_Examenes() + getNotaPormedio_Tareas() + getNotaPromedio_Quices() + getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3();
         }
         return prom_final;
+    }
+    public static void main(String[] args) throws Exception {
+        int borrar = 1;
+        int limitador = 0;
+
+        ArrayList<StudentType_A> estudiA = new ArrayList<>();
+        ArrayList<StudentType_B> estudiB = new ArrayList<>();
+
+        List<String> lista_Objetos = new ArrayList<>();
+        Scanner lector = new Scanner(new File(""));
+        lector.useDelimiter("[,:\r\n]+");
+        while (lector.hasNext()) {
+            if (borrar <=1) {
+                lector.nextLine();
+                borrar++;
+            }
+            if (limitador == 12) {
+                if (Objects.equals(lista_Objetos.get(5), "A")){
+                    estudiA.add(new StudentType_A(lista_Objetos.get(0), lista_Objetos.get(1), lista_Objetos.get(2),
+                            lista_Objetos.get(3), lista_Objetos.get(4), lista_Objetos.get(5), Integer.parseInt(lista_Objetos.get(6)),
+                            Integer.parseInt(lista_Objetos.get(7)), Integer.parseInt(lista_Objetos.get(8)),
+                            Integer.parseInt(lista_Objetos.get(9)), Integer.parseInt(lista_Objetos.get(10)),
+                            Integer.parseInt(lista_Objetos.get(11))));
+                }
+                else{
+                    estudiB.add(new StudentType_B(lista_Objetos.get(0), lista_Objetos.get(1), lista_Objetos.get(2),
+                            lista_Objetos.get(3), lista_Objetos.get(4), lista_Objetos.get(5), Integer.parseInt(lista_Objetos.get(6)),
+                            Integer.parseInt(lista_Objetos.get(7)), Integer.parseInt(lista_Objetos.get(8)),
+                            Integer.parseInt(lista_Objetos.get(9)), Integer.parseInt(lista_Objetos.get(10)),
+                            Integer.parseInt(lista_Objetos.get(11))));
+                }
+                lista_Objetos.clear();
+                limitador = 0;
+                lector.nextLine();
+            } else {
+                lista_Objetos.add(lector.next());
+                limitador++;
+            }
+        }
+        if (Objects.equals(lista_Objetos.get(5), "A")){
+            estudiA.add(new StudentType_A(lista_Objetos.get(0), lista_Objetos.get(1), lista_Objetos.get(2),
+                    lista_Objetos.get(3), lista_Objetos.get(4), lista_Objetos.get(5), Integer.parseInt(lista_Objetos.get(6)),
+                    Integer.parseInt(lista_Objetos.get(7)), Integer.parseInt(lista_Objetos.get(8)),
+                    Integer.parseInt(lista_Objetos.get(9)), Integer.parseInt(lista_Objetos.get(10)),
+                    Integer.parseInt(lista_Objetos.get(11))));
+        }
+        else{estudiA.add(new StudentType_A(lista_Objetos.get(0), lista_Objetos.get(1), lista_Objetos.get(2),
+                lista_Objetos.get(3), lista_Objetos.get(4), lista_Objetos.get(5), Integer.parseInt(lista_Objetos.get(6)),
+                Integer.parseInt(lista_Objetos.get(7)), Integer.parseInt(lista_Objetos.get(8)),
+                Integer.parseInt(lista_Objetos.get(9)), Integer.parseInt(lista_Objetos.get(10)),
+                Integer.parseInt(lista_Objetos.get(11))));
+        }
     }
 }

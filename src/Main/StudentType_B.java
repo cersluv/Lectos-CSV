@@ -8,11 +8,17 @@ public class StudentType_B extends Receiver {
     }
 
     @Override
-    public double PromedioFinal(){
-        double prom_final = 0.0;
-        if (Objects.equals(getTipoEstudiante(), "B")){
-            prom_final = (getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3()) / 3.0;
+    public double notaPromedio(){
+        double prom_proyectos = 0.0;
+        if (Objects.equals(getTipoEstudiante(), "A")){
+            prom_proyectos = (getNotaPromedio_Examenes() + getNotaPromedio_Quices() + getNotaPormedio_Tareas() / 3.0);
         }
-        return prom_final;
+        return prom_proyectos;
+    }
+    public double notaFinal(){
+        double nota_final = 0.0;
+        nota_final = getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3() + getNotaPromedio_Examenes() +
+                getNotaPromedio_Examenes() + getNotaPromedio_Quices() + getNotaPromedio_Examenes();
+        return nota_final = 0.0;
     }
 }

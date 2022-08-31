@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc7839c-4cc9-4d53-8a32-74cb9f598d89" name="Changes" comment="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida.&#10;&#10;Se agregaron las clases &quot;StudentType_A&quot; , &quot;StudentType_B&quot; y &quot;Receiver&quot;, los cuales al recibir datos, hacen el trabajo de consola. Falta un Lector de CSV, para darle los datos a estas clases para que trabaja, además de trabajar en el JavaFX para mostrar los datos.">
-      <change afterPath="$PROJECT_DIR$/src/Main/ScannerCSV.java" afterDir="false" />
+    <list default="true" id="5bc7839c-4cc9-4d53-8a32-74cb9f598d89" name="Changes" comment="Se Logró Hacer el scanner de las hojas de excel separadas por comillas y que mostrara los datos en pantalla, falta cargar y mostrar los datos en pantalla, además de mostrar las columnas extras. Se borró una linea en Student Type B.">
+      <change afterPath="$PROJECT_DIR$/src/Main/Console_Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/StudentType_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/StudentType_A.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/StudentType_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/StudentType_B.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1661706172938</updated>
       <workItem from="1661706174904" duration="3850000" />
-      <workItem from="1661712518235" duration="7070000" />
+      <workItem from="1661712518235" duration="16533000" />
+      <workItem from="1661808791537" duration="30000" />
+      <workItem from="1661911038453" duration="3453000" />
     </task>
     <task id="LOCAL-00001" summary="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida.">
       <created>1661711900677</created>
@@ -97,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661716366667</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se Logró Hacer el scanner de las hojas de excel separadas por comillas y que mostrara los datos en pantalla, falta cargar y mostrar los datos en pantalla, además de mostrar las columnas extras. Se borró una linea en Student Type B.">
+      <created>1661722471522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661722471522</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida." />
     <MESSAGE value="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida.&#10;&#10;Se agregaron las clases &quot;StudentType_A&quot; , &quot;StudentType_B&quot; y &quot;Receiver&quot;, los cuales al recibir datos, hacen el trabajo de consola. Falta un Lector de CSV, para darle los datos a estas clases para que trabaja, además de trabajar en el JavaFX para mostrar los datos." />
-    <option name="LAST_COMMIT_MESSAGE" value="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida.&#10;&#10;Se agregaron las clases &quot;StudentType_A&quot; , &quot;StudentType_B&quot; y &quot;Receiver&quot;, los cuales al recibir datos, hacen el trabajo de consola. Falta un Lector de CSV, para darle los datos a estas clases para que trabaja, además de trabajar en el JavaFX para mostrar los datos." />
+    <MESSAGE value="Se Logró Hacer el scanner de las hojas de excel separadas por comillas y que mostrara los datos en pantalla, falta cargar y mostrar los datos en pantalla, además de mostrar las columnas extras. Se borró una linea en Student Type B." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se Logró Hacer el scanner de las hojas de excel separadas por comillas y que mostrara los datos en pantalla, falta cargar y mostrar los datos en pantalla, además de mostrar las columnas extras. Se borró una linea en Student Type B." />
   </component>
 </project>
