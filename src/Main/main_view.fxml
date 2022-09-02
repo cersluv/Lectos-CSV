@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="931.0" prefWidth="1392.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <TableView>
+            <columns>
+                <TableColumn fx:id="Show_Carnet" editable="false" prefWidth="97.0" sortable="false" text="Carnet" />
+                <TableColumn fx:id="Show_Nom" editable="false" prefWidth="153.0" sortable="false" text="Nombre Completo" />
+                <TableColumn fx:id="Show_Tel" editable="false" prefWidth="89.0" sortable="false" text="Teléfono" />
+                <TableColumn fx:id="Show_Nick" editable="false" prefWidth="91.0" sortable="false" text="Nickname" />
+                <TableColumn fx:id="Show_Type" editable="false" minWidth="0.0" prefWidth="111.0" sortable="false" text="Tipo de Estudiante" />
+                <TableColumn fx:id="Show_Examenes" editable="false" minWidth="0.0" prefWidth="121.0" sortable="false" text="Promedio Examenes" />
+                <TableColumn fx:id="Show_Quices" editable="false" minWidth="0.0" prefWidth="100.0" sortable="false" text="Promedio Quices" />
+                <TableColumn fx:id="Show_Tareas" editable="false" minWidth="0.0" prefWidth="101.0" sortable="false" text="Promedio Tareas" />
+                <TableColumn fx:id="Show_P1" editable="false" prefWidth="65.0" sortable="false" text="Proyecto 1" />
+                <TableColumn fx:id="Show_P2" editable="false" minWidth="0.0" prefWidth="70.0" sortable="false" text="Proyecto 2" />
+                <TableColumn fx:id="Show_P3" editable="false" prefWidth="69.0" sortable="false" text="Proyecto 3" />
+                <TableColumn fx:id="Show_PromA" editable="false" prefWidth="140.0" sortable="false" text="Nota Promedio (E, Q, T)" />
+                <TableColumn fx:id="Show_PromB" editable="false" prefWidth="118.0" sortable="false" text="Promedio Proyectos" />
+                <TableColumn fx:id="Show_PromF" editable="false" minWidth="6.0" prefWidth="65.0" sortable="false" text="Nota final" />
+            </columns>
+        </TableView>
+    </content>
+</TitledPane>
