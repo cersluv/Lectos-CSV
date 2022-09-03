@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc7839c-4cc9-4d53-8a32-74cb9f598d89" name="Changes" comment="Se me despicho tere.&#10;Implementando ajustes en el FXML, botones y demás, ahora me presenta un error llamado &quot;Exception in Application Start Method&quot;, y me tira 7354354354 lineas de código de error, no me da un lugar en donde corregirlo, me gustaria enfocarme más en esto, pero son las 9 de la noche, mañana tengo quiz de datos, además de  quiz y tarea de Ecua. Dios acaba con mi sufrimiento.">
+    <list default="true" id="5bc7839c-4cc9-4d53-8a32-74cb9f598d89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/StudentType_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/StudentType_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/StudentType_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/StudentType_B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/main_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <workItem from="1662091108123" duration="2239000" />
       <workItem from="1662093696198" duration="1633000" />
       <workItem from="1662167913977" duration="1262000" />
-      <workItem from="1662169322778" duration="7319000" />
+      <workItem from="1662169322778" duration="7785000" />
     </task>
     <task id="LOCAL-00001" summary="La base del JAVAFX está lista con el &quot;MainApp&quot;, &quot;MainController&quot; y el &quot;mainview&quot;&#10;Se iniciará el esqueleto de la app con la teoria, las clases de los estudiantes A y B, además de una clase que los divida.">
       <created>1661711900677</created>
@@ -134,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662087371290</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="LO LOGRÉ&#10;SOLUCIONÉ EL ERROR&#10;Eran errores con las variables, algunas tenían amyusculas y otras no, sin mencionar que en una clase puse un &quot;abstract&quot; sin sentido, entonces la máquina decía que habia un método que recopilaba, pero no ejectaba. Solo me tomó 2 días y tres desveladas encontrar estos errores. Quiero Dormir">
+      <created>1662177054916</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662177054916</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +158,8 @@
     <MESSAGE value="Se Logró Hacer el scanner de las hojas de excel separadas por comillas y que mostrara los datos en pantalla, falta cargar y mostrar los datos en pantalla, además de mostrar las columnas extras. Se borró una linea en Student Type B." />
     <MESSAGE value="Se obtuvo un proceso de iluminación divino después de compartir ideas con compañeros, se eliminaron clases, realmente todas se implementaron a la clase &quot;Receiver&quot;, ya que esta lee los archivos y los divide, además de implementar abstracción para poder hacer las divisiones en las subclases de una forma más sencilla. Fue un proceso largo, no e dormido bien en los últimos 2 días, pero ya se ve la luz, ya que solo falta implementar y mostrar los datos en el JavaFX :)))))))))))" />
     <MESSAGE value="Se me despicho tere.&#10;Implementando ajustes en el FXML, botones y demás, ahora me presenta un error llamado &quot;Exception in Application Start Method&quot;, y me tira 7354354354 lineas de código de error, no me da un lugar en donde corregirlo, me gustaria enfocarme más en esto, pero son las 9 de la noche, mañana tengo quiz de datos, además de  quiz y tarea de Ecua. Dios acaba con mi sufrimiento." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se me despicho tere.&#10;Implementando ajustes en el FXML, botones y demás, ahora me presenta un error llamado &quot;Exception in Application Start Method&quot;, y me tira 7354354354 lineas de código de error, no me da un lugar en donde corregirlo, me gustaria enfocarme más en esto, pero son las 9 de la noche, mañana tengo quiz de datos, además de  quiz y tarea de Ecua. Dios acaba con mi sufrimiento." />
+    <MESSAGE value="LO LOGRÉ&#10;SOLUCIONÉ EL ERROR&#10;Eran errores con las variables, algunas tenían amyusculas y otras no, sin mencionar que en una clase puse un &quot;abstract&quot; sin sentido, entonces la máquina decía que habia un método que recopilaba, pero no ejectaba. Solo me tomó 2 días y tres desveladas encontrar estos errores. Quiero Dormir" />
+    <option name="LAST_COMMIT_MESSAGE" value="LO LOGRÉ&#10;SOLUCIONÉ EL ERROR&#10;Eran errores con las variables, algunas tenían amyusculas y otras no, sin mencionar que en una clase puse un &quot;abstract&quot; sin sentido, entonces la máquina decía que habia un método que recopilaba, pero no ejectaba. Solo me tomó 2 días y tres desveladas encontrar estos errores. Quiero Dormir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,7 +23,7 @@ public class StudentType_B extends Receiver {
     }
 
     /**
-     * Variante B de la abstracción
+     * Variante B de la abstracción para la nota promedio
      *
      */
     @Override
@@ -36,6 +36,10 @@ public class StudentType_B extends Receiver {
         }
         return Integer.toString(prom_proyectos);
     }
+    /**
+     * Variante B de la abstracción para la nota final
+     *
+     */
     public Integer notaFinal(){
         Integer nota_final = 0;
         nota_final = (getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3() + getNotaPromedio_Examenes() +

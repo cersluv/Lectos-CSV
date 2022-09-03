@@ -23,7 +23,7 @@ public class StudentType_A extends Receiver{
                 nota_Promedio_A, nota_Promedio_B, nota_Final);
     }
     /**
-     * Variante A de la abstracción
+     * Variante A de la abstracción para la nota promedio
      *
      */
     @Override
@@ -35,6 +35,10 @@ public class StudentType_A extends Receiver{
         }
         return Integer.toString(prom_ETQ);
     }
+    /**
+     * Variante A de la abstracción para la nota final
+     *
+     */
     public Integer notaFinal(){
         Integer nota_final = 0;
         nota_final = (getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3() + getNotaPormedio_Tareas() +
