@@ -20,15 +20,28 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public abstract class MainController implements Initializable {
+/**
+ *La clase Main Controller, es el recibe toda la información, y se comunica con las otras clases, gráfica en el FX, crear
+ * las listas de los estudiantes, el buscador de CSV, además se que tiene la función "start", la cual es llamada por
+ * la "mainApp" para arrancar el código.
+ */
+public class MainController implements Initializable {
 
+    /**
+     *  Seteo de Listas y Variable del CSV
+     *
+     */
     private ObservableList<Receiver> Estudiantes;
+    private File archivo;
     private ArrayList<StudentType_A> estudiA = new ArrayList<>();
     private ArrayList<StudentType_B> estudiB = new ArrayList<>();
-    private File archivo;
 
+    /**
+     * Los datos que va a tener cada columna
+     *
+     */
     @FXML
-    private TableView<Receiver> Show_data;
+    private TableView<Receiver> Tabla;
     @FXML
     private TableColumn<Receiver, String> Show_Carnet;
     @FXML
@@ -42,49 +55,61 @@ public abstract class MainController implements Initializable {
     @FXML
     private TableColumn<Receiver, String> Show_Type;
     @FXML
-    private TableColumn<Receiver, String> Show_Examenes;
+    private TableColumn<Receiver, Integer> Show_Examenes;
     @FXML
-    private TableColumn<Receiver, String> Show_Quices;
+    private TableColumn<Receiver, Integer> Show_Quices;
     @FXML
-    private TableColumn<Receiver, String> Show_Tareas;
+    private TableColumn<Receiver, Integer> Show_Tareas;
     @FXML
-    private TableColumn<Receiver, String> Show_P1;
+    private TableColumn<Receiver, Integer> Show_P1;
     @FXML
-    private TableColumn<Receiver, String> Show_P2;
+    private TableColumn<Receiver, Integer> Show_P2;
     @FXML
-    private TableColumn<Receiver, String> Show_P3;
+    private TableColumn<Receiver, Integer> Show_P3;
     @FXML
-    private TableColumn<Receiver, String> Show_PromA;
+    private TableColumn<Receiver, Integer> Show_PromA;
     @FXML
-    private TableColumn<Receiver, String> Show_PromB;
+    private TableColumn<Receiver, Integer> Show_PromB;
     @FXML
-    private TableColumn<Receiver, String> Show_PromF;
+    private TableColumn<Receiver, Integer> Show_PromF;
 
     FileChooser seleccionador = new FileChooser();
+    /**
+     * Función para recibir el CSV y cambiar el CSV
+     *
+     */
     @FXML
     private void getText(MouseEvent event) {
         archivo = seleccionador.showOpenDialog(new Stage());
     }
+    /**
+     *  Seteo de la fila, dependiendo la información entrante
+     *
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Estudiantes = FXCollections.observableArrayList();
-        this.Show_Carnet.setCellValueFactory(new PropertyValueFactory<>("carne"));
-        this.Show_Nom.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        this.Show_Correo.setCellValueFactory(new PropertyValueFactory<>("correo"));
-        this.Show_Tel.setCellValueFactory(new PropertyValueFactory<>("telefono"));
+        this.Show_Carnet.setCellValueFactory(new PropertyValueFactory<>("Carne"));
+        this.Show_Nom.setCellValueFactory(new PropertyValueFactory<>("NombreCompleto"));
+        this.Show_Correo.setCellValueFactory(new PropertyValueFactory<>("Correo"));
+        this.Show_Tel.setCellValueFactory(new PropertyValueFactory<>("Telefono"));
         this.Show_Nick.setCellValueFactory(new PropertyValueFactory<>("nickname"));
-        this.Show_Type.setCellValueFactory(new PropertyValueFactory<>("tipoEstudiante"));
-        this.Show_Examenes.setCellValueFactory(new PropertyValueFactory<>("notaPromedioE"));
-        this.Show_Quices.setCellValueFactory(new PropertyValueFactory<>("notaPromedioQ"));
-        this.Show_Tareas.setCellValueFactory(new PropertyValueFactory<>("notaPromedioT"));
-        this.Show_P1.setCellValueFactory(new PropertyValueFactory<>("notaP1"));
-        this.Show_P2.setCellValueFactory(new PropertyValueFactory<>("notaP2"));
-        this.Show_P3.setCellValueFactory(new PropertyValueFactory<>("notaP3"));
-        this.Show_PromA.setCellValueFactory(new PropertyValueFactory<>("notaPromedioTipoA"));
-        this.Show_PromB.setCellValueFactory(new PropertyValueFactory<>("notaPromedioTipoB"));
-        this.Show_PromF.setCellValueFactory(new PropertyValueFactory<>("notaFinal"));
+        this.Show_Type.setCellValueFactory(new PropertyValueFactory<>("TipoEstudiante"));
+        this.Show_Examenes.setCellValueFactory(new PropertyValueFactory<>("notaPromedio_Examenes"));
+        this.Show_Quices.setCellValueFactory(new PropertyValueFactory<>("notaPromedio_Quices"));
+        this.Show_Tareas.setCellValueFactory(new PropertyValueFactory<>("notaPormedio_Tareas"));
+        this.Show_P1.setCellValueFactory(new PropertyValueFactory<>("nota_Proyecto_1"));
+        this.Show_P2.setCellValueFactory(new PropertyValueFactory<>("nota_Poryecto_2"));
+        this.Show_P3.setCellValueFactory(new PropertyValueFactory<>("nota_Proyecto_3"));
+        this.Show_PromA.setCellValueFactory(new PropertyValueFactory<>("nota_Promedio_A"));
+        this.Show_PromB.setCellValueFactory(new PropertyValueFactory<>("nota_Promedio_B"));
+        this.Show_PromF.setCellValueFactory(new PropertyValueFactory<>("nota_Final"));
 
     }
+    /**
+     * Función que inicia el proceso, envía los datos a las demás clases.
+     * Hace la división entre tipo a y b
+     */
     @FXML
     private void start() throws Exception{
         int borrar = 1;
@@ -148,7 +173,7 @@ public abstract class MainController implements Initializable {
         }
         Estudiantes.addAll(estudiA);
         Estudiantes.addAll(estudiB);
-        this.Show_data.setItems(Estudiantes);
+        this.Tabla.setItems(Estudiantes);
         lector.close();
     }
 }

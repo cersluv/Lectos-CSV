@@ -8,7 +8,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+/**
+ * Clase de estudiante B
+ * Junto con su Método contructor de esta
+ */
 public class StudentType_B extends Receiver {
     public StudentType_B(String carne, String nombreCompleto, String correo, String Telefono, String nickname,
                          String tipoEstudiante, Integer notaPromedio_Examenes, Integer notaPromedio_Quices,
@@ -19,12 +22,16 @@ public class StudentType_B extends Receiver {
                 nota_Promedio_A, nota_Promedio_B, nota_Final);
     }
 
+    /**
+     * Variante B de la abstracción
+     *
+     */
     @Override
     public String notaPromedio(){
         Integer prom_proyectos = 0;
         if (Objects.equals(getTipoEstudiante(), "B")){
-            prom_proyectos = (getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3() / 3);
-            setNotaPromedioTipoB(Integer.toString(prom_proyectos));
+            prom_proyectos = ((getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3())/3);
+            setNota_Promedio_B(Integer.toString(prom_proyectos));
 
         }
         return Integer.toString(prom_proyectos);
@@ -33,6 +40,7 @@ public class StudentType_B extends Receiver {
         Integer nota_final = 0;
         nota_final = (getNota_Proyecto_1() + getNota_Poryecto_2() + getNota_Proyecto_3() + getNotaPromedio_Examenes() +
                 getNotaPromedio_Examenes() + getNotaPromedio_Quices() + getNotaPromedio_Examenes())/6;
-        return nota_final = 0;
+        setNota_Final(nota_final);
+        return nota_final;
     }
 }

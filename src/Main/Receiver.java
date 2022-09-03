@@ -9,13 +9,13 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ * Super clase y abstracta. Tiene como función heredale los metodos constructores a las subclases
+ * También los métodos de nota promedio y final son abstractos, para las subclases
+ *
+ */
 public abstract class Receiver {
-    /* Clase Padre y receptora de información
-     * Recibe los datos de los estudiantes
-     * Les hace cambios y también los dá
-     *
-     */
+
     private String carne;
     private String NombreCompleto;
     private String Correo;
@@ -82,30 +82,34 @@ public abstract class Receiver {
     public Integer getNota_Proyecto_3() {
         return Nota_Proyecto_3;
     }
-    public String getNotaPromedioTipoB() {
+    public String getNota_Promedio_B() {
         return nota_Promedio_B;
     }
 
-    public void setNotaPromedioTipoB(String notaPromedioTipoB) {
+    public void setNota_Promedio_B(String nota_Promedio_B) {
         this.nota_Promedio_B = nota_Promedio_B;
     }
 
-    public String getNotaPromedioTipoA() {
+    public String getNota_Promedio_A() {
         return nota_Promedio_A;
     }
 
-    public void setNotaPromedioTipoA(String notaPromedioTipoA) {
+    public void setNota_Promedio_A(String nota_Promedio_A) {
         this.nota_Promedio_A = nota_Promedio_A;
     }
 
-    public Integer getNotaFinal() {
+    public Integer getNota_Final() {
         return nota_Final;
     }
 
-    public void setNotaFinal(Integer notaFinal) {
+    public void setNota_Final(Integer nota_Final) {
         this.nota_Final = nota_Final;
     }
 
+    /**
+     * Método constructor
+     *
+     */
     public Receiver(String carne, String nombreCompleto, String correo, String Telefono, String nickname,
                     String tipoEstudiante, Integer notaPromedio_Examenes, Integer notaPromedio_Quices,
                     Integer notaPormedio_Tareas, Integer nota_Proyecto_1, Integer nota_Poryecto_2,
@@ -127,7 +131,10 @@ public abstract class Receiver {
         this.nota_Promedio_B = nota_Promedio_B;
         this.nota_Final = nota_Final;
     }
-
+    /**
+     * Metodos abstractos, para las subclases
+     *
+     */
     public abstract String notaPromedio();
 
     public abstract Integer notaFinal();
